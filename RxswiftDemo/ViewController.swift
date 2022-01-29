@@ -23,9 +23,8 @@ class ViewController: UIViewController {
         
     }
     
-    
     // MARK: - PublishSubject
-    func publishSubject(){
+    @IBAction func publishSubject(_ sender: Any) {
         //创建一个PublishSubject
         let subject = PublishSubject<String>()
         
@@ -66,8 +65,11 @@ class ViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    
+    
+    
     // MARK: - BehaviorSubject
-    func behaviorSubject(){
+    @IBAction func behaviorSubject(_ sender: Any){
         //创建一个BehaviorSubject
         let subject = BehaviorSubject(value: "111")
         
@@ -100,7 +102,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - ReplaySubject
-    func replaySubject(){
+    @IBAction func replaySubject(_ sender: Any){
         
         //创建一个bufferSize为2的ReplaySubject
         let subject = ReplaySubject<String>.create(bufferSize: 2)
